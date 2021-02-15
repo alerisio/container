@@ -1,0 +1,12 @@
+Updates mainly to handling of closures.
+
+Updated how closures are retrieved, made, and called.  Also ensured use declarations for auto-wiring are only retrived for classes with valid filenames.
+
+src/Container.php:40 -- Added optional $items[] parameter, and within function check if exists and load it instead of the container file.  
+src/Container.php:132 -- Added extra conditional into if() statement to ensure class retrieving use declarations for has a valid filename associated with it.
+src/Container.php:call() - Modified to accept string as first argument as well, and check container for closure with string name.
+src/Container.php:getInjectionParams() - First argument accepts ReflectionMethod | ReflectionFunction for closures.
+src/Container.php:get() - If retrieving a closure, will return closure without executing it.
+src/Container.php:has() - Ensured it also checks services if item exists
+
+

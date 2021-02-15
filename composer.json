@@ -1,0 +1,19 @@
+{
+    "name": "aleris/container",
+    "description": "Light weight, straight forward DI container that simply works, and works well.", 
+    "type": "package",
+    "homepage": "https://aleris.io",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0.0",
+        "psr/container": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": { 
+            "Aleris\\Container\\": "src/"
+        }
+    }
+}
